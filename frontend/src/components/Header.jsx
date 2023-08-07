@@ -1,12 +1,11 @@
-import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { FaShoppingCart, FaUser } from "react-icons/fa";
 
 const Header = () => {
   return (
     <header>
-      <Navbar>
-        <Container bg="dark" variant="dark" expand="md" collapseOnSelect>
+      <Navbar bg="dark" variant="dark" expand="lg" collapseOnSelect>
+        <Container>
           <Navbar.Brand href="/">ProShop</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

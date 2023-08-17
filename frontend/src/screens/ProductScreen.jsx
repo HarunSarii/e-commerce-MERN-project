@@ -6,16 +6,15 @@ import products from "../products";
 const ProductScreen = () => {
   const { id } = useParams();
   const product = products.find((p) => p._id === id);
-  console.log("p", product);
 
   return (
     <>
-      <Link className="btn btn-light my-3" to="/">
+      <Link to="/" className="btn btn-light my-3">
         Go Back
       </Link>
       <Row>
         <Col md={5}>
-          <Image src={product.image} alt={product.name} />
+          <Image src={product.image} alt={product.name} fluid />
         </Col>
         <Col md={4}>
           <ListGroup variant="flush">
@@ -47,9 +46,7 @@ const ProductScreen = () => {
                 <Row>
                   <Col>Status:</Col>
                   <Col>
-                    <strong>
-                      ${product.countInStock > 0 ? "In Stock" : "Out Of Stock"}
-                    </strong>
+                    {product.countInStock > 0 ? "In Stock" : "Out Of Stock"}
                   </Col>
                 </Row>
               </ListGroup.Item>

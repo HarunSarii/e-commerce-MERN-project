@@ -2,7 +2,6 @@ import React from "react";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
 const Rating = ({ value, text }) => {
-  console.log("arrayyyy", [...Array(5)]);
   return (
     <div className="rating">
       {[...Array(5)].map((_, i) => {
